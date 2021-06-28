@@ -1,16 +1,3 @@
-// function toCamelCase(str) {
-//   // const array = str.split('');
-//   // return array[3];
-//   // if (array.indexOf('_') || array.indexOf('-')) {
-//   //   console.log(array.replace('-', ''));
-//   // }
-
-//   if (str.includes('-') || str.includes('_')) {
-//     str.replace('-', 'hi');
-//   }
-//   return str;
-// }
-
 function toCamelCase(str) {
   let strArray;
   if (str.indexOf('-') !== -1) {
