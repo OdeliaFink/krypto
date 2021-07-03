@@ -6,8 +6,11 @@ Each line is seperated with \n
 Invalid input ( undefined / null / integer ) should return an empty string
 */
 
-function sortVowels(s) {
-  //code
-}
+const sortVowels = (s) =>
+  typeof s !== 'string'
+    ? ''
+    : [...s]
+        .map((vowel) => (/[aeiou]/i.test(vowel) ? `|${vowel}` : `${vowel}|`))
+        .join('\n');
 
-sortVowels('Codewars'); // 'C|\n|o\nd|\n|e\nw|\n|a\nr|\ns|');
+console.log(sortVowels('Codewars')); // 'C|\n|o\nd|\n|e\nw|\n|a\nr|\ns|');
