@@ -1,3 +1,10 @@
 var FilterString = function (value) {
-  //Complete this function :)
+  let valueArr = [...value];
+  valueArr.filter((number) => {
+    if (value === Number) {
+      console.log(number);
+    }
+  });
 };
+
+FilterString('123'); // 123,
