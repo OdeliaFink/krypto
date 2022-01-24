@@ -4,7 +4,7 @@ pragma solidity ^0.8.0;
 
 contract Transactions {
   //like a class in OOP
-  uint256 transactionCounter;
+  uint256 transactionCount;
 
   /*like a function*/ event Transfer(address from, address receiver, uint amount, string message, uint256 timestamp, string keyword);
   struct TransferStruct {
@@ -17,13 +17,16 @@ contract Transactions {
   }
   TransferStruct[] transactions;
 
-  function addToBlockain() public {
-    
-  }
-  function addToBlockain() public {
+  function addToBlockain(address payable receiver, uint amount, string memory message, string memory keyword) public {
+    transactionCount += 1;
+    transactions.push(TransferStruct(msg.sender, receiver, amount, message, block.timestamp, keyword));
 
+    emit Transfer(msg.sender, receiver, amount, message, block.timestamp, keyword);
   }
-  function addToBlockain() public {
-
+  function getAllTransactions() public view returns (TransferStruct[] memory) {
+    return transactions;
+  }
+  function getTransactionCount() public view returns (uint256) {
+    return transactionCount;
   }
 }
