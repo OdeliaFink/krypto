@@ -1,5 +1,3 @@
-//https://eth-ropsten.alchemyapi.io/v2/yGziFO13cYdZF7dEoCRMznJbUMZgflRG
-
 require('@nomiclabs/hardhat-waffle');
 
 module.exports = {
