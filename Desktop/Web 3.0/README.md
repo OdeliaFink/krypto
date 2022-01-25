@@ -13,3 +13,8 @@ npx hardhat node
 node scripts/sample-script.js
 npx hardhat help
 ```
+
+## Final Product
+
+!['Landing page'](https://github.com/OdeliaFink/krypto-app/tree/master/Desktop/Web%203.0/docs/landing-page.png)
+!['Services'](https://github.com/OdeliaFink/krypto-app/tree/master/Desktop/Web%203.0/docs/services.png)
